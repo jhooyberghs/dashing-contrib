@@ -20,8 +20,8 @@ module DashingContrib
           version: options[:version] || 3,
           time_format: options[:time_format] || 'iso8601',
           verify_ssl: options[:verify_ssl] || true,
+          skip_ok: options[:skip_ok],
         })
-
         client.status(options[:nagios_filter] || {})
       end
 

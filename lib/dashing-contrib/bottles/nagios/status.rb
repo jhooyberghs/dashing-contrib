@@ -3,11 +3,15 @@ module DashingContrib
     module Status
       extend self
 
-      def fetch(client, options = {})
-        critical = client.service_status(default_critical_options.merge(options))
-        warning  = client.service_status(default_warning_options.merge(options))
-        ok       = client.service_status(default_ok_options.merge(options))
-        unknown  = client.service_status(default_unknown_options.merge(options))
+      def fetch(client, nagios_options = {}, skip_ok = false)
+        critical = client.service_status(default_critical_options.merge(nagios_options))
+        warning  = client.service_status(default_warning_options.merge(nagios_options))
+        ok       = if skip_ok
+                     []
+                   else
+                     client.service_status(default_ok_options.merge(nagios_options))
+                   end
+        unknown  = client.service_status(default_unknown_options.merge(nagios_options))
         ok.select! { |check| check['status'] == 'OK' }
 
         { critical: critical, warning: warning, unknown: unknown, ok: ok }
