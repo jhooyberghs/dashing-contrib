@@ -19,14 +19,14 @@ Gem::Specification.new do |spec|
   spec.require_paths = ['lib']
 
   spec.add_dependency 'dotenv', '~> 0.11.1'
-  spec.add_dependency 'rest-client', '~> 1.6'
+  spec.add_dependency 'rest-client'
   spec.add_dependency 'multi_json', '~> 1.10'
   spec.add_dependency 'time_diff', '~> 0.3'
   spec.add_dependency 'sidekiq', '~> 3.0'
   spec.add_dependency 'activesupport', '~> 4.1'
-  spec.add_dependency 'sinatra', '~> 1.4'
-  spec.add_dependency 'dashing', '~> 1.3'
-  spec.add_dependency 'nagiosharder', '~> 0'
+  spec.add_dependency 'sinatra'
+  spec.add_dependency 'dashing'
+  spec.add_dependency 'nagiosharder'
 
   spec.add_development_dependency 'rake', '~> 0'
   spec.add_development_dependency 'rspec-core', '~> 3.4'
