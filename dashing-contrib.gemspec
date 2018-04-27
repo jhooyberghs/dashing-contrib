@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'sidekiq', '~> 3.0'
   spec.add_dependency 'activesupport', '~> 4.1'
   spec.add_dependency 'sinatra'
-  spec.add_dependency 'dashing'
+  spec.add_dependency 'smashing'
   spec.add_dependency 'nagiosharder'
 
   spec.add_development_dependency 'rake', '~> 0'
