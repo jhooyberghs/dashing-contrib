@@ -28,7 +28,7 @@ Add the following on top of the `config.ru`
 
     $: << File.expand_path('./lib', File.dirname(__FILE__))
     require 'dashing-contrib'
-    require 'dashing'
+    require 'smashing'
     DashingContrib.configure
     
 Include built-in CoffeeScript to `assets/javascripts/application.coffee`

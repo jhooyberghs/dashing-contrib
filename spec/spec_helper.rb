@@ -1,7 +1,7 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'dashing-contrib'
-require 'dashing'
+require 'smashing'
 
 RSpec.configure do |config|
   config.order = :random
